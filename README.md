@@ -3,15 +3,17 @@
 Project นี้เกี่ยวกับ game XO โดยการทำงานหลักๆมีดังนี้
 1. สามารถดู replay หลังจากเล่นจบไปแล้วได้
 2. มี bot ที่สามารถโต้ตอบผู้เล่นได้
+
 โดยได้ใช้ packages ดังต่อไปนั้
+
 1. getX ใช้ในการจัดการ State management ของตัว Project
 2. Hive ใช้ในการเก็บข้อมูลประวัติการเล่นและ Replay
 3. google_fonts ใช้ตกแต่ง Text ในตัว Project
 
 ## Table of Contents (สารบัญ)
-1. [การติดตั้ง (Installation)](#การติดตั้ง)
-2. [วิธีการใช้งาน (Usage)](#วิธีการใช้งาน)
-3. [อธิบาย (Explain)](#อธิบาย)
+1. [การติดตั้ง (Installation)](#การติดตั้ง-installation)
+2. [วิธีการใช้งาน (Usage)](#วิธีการใช้งาน-usage)
+3. [อธิบาย (Explain)](#อธิบาย-explain)
 
 
 ## การติดตั้ง (Installation)
@@ -22,15 +24,15 @@ Project นี้เกี่ยวกับ game XO โดยการทำง
 4. flutter run หรือ กด F5 เพื่อ run and debug
 
 ## วิธีการใช้งาน (Usage)
-![Screenshot](./img/home_view.jpg "Home View")
+<img src="./img/home_view.jpg" alt="Home View" width="500"/>
 
 1. หน้า Home สามารถเลือก "เริ่มเกม" หรือ "ดูประวัติการเล่น" ได้
 
-![Screenshot](./img/game_view.jpg "Game View")
+<img src="./img/game_view.jpg" alt="Home View" width="500"/>
 
 2. หน้าเล่นเกมถ้าเมื่อจบเกมจะมีปุ่มรีเซ็ตเพื่อเริ่มเล่นเกมใหม่ได้ทันที
 
-![Screenshot](./img/replay_view.jpg "replay View")
+<img src="./img/replay_view.jpg" alt="Home View" width="500"/>
 
 3. หน้า Replay สามารถดูประวัติการเล่นที่เคยเล่นมา
 
@@ -42,7 +44,7 @@ Project นี้เกี่ยวกับ game XO โดยการทำง
 2. ฟังก์ชันนี้ใช้ในการจัดการเมื่อผู้เล่นทำการเล่นโดยจะตรวจสอบว่าช่องที่เลือกนั้นว่างอยู่หรือไม่ และตรวจสอบว่าเกมยังไม่จบ
 
 ![Screenshot](./img/botMove_code.png "game_controller.dart")
-3. ฟังก์ชันนี้จัดการการเล่นของ bot โดย bot เป็น O
+3. ฟังก์ชันนี้จัดการการเล่นของ bot โดย bot เป็น 'O'
 
 ![Screenshot](./img/switchPlay_code.png "game_controller.dart")
 4. ฟังก์ชันนี้ทำหน้าที่สลับผู้เล่นระหว่าง 'X' และ 'O'
