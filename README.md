@@ -54,4 +54,5 @@ Project นี้เกี่ยวกับ game XO โดยการทำง
 
 ![Screenshot](./img/saveandreset_code.png "game_controller.dart")
 6. saveGame ฟังก์ชันนี้ใช้ในการบันทึกผลลัพธ์ของเกมลงในฐานข้อมูล Hive
+
 7. resetGame ฟังก์ชันนี้รีเซ็ตเกมเพื่อเริ่มใหม่
