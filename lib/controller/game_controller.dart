@@ -59,16 +59,15 @@ class GameController extends GetxController{
   }
 
   bool checkWin(String player) {
-    // ตรวจสอบแนวชนะ
     List<List<int>> winPatterns = [
       [0, 1, 2],
       [3, 4, 5],
-      [6, 7, 8], // แนวนอน
+      [6, 7, 8], 
       [0, 3, 6],
       [1, 4, 7],
-      [2, 5, 8], // แนวตั้ง
+      [2, 5, 8],
       [0, 4, 8],
-      [2, 4, 6], // แนวทแยง
+      [2, 4, 6],
     ];
     for (var pattern in winPatterns) {
       if (board[pattern[0]] == player &&

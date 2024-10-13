@@ -20,7 +20,7 @@ class _HomeViewState extends State<HomeView>
     // สร้าง AnimationController
     _controller = AnimationController(
       vsync: this,
-      duration: Duration(seconds: 10),
+      duration: const Duration(seconds: 10),
     )..repeat(); // ทำให้วนลูปไม่รู้จบ
 
     // สร้าง Animation ที่เปลี่ยนจาก 0 ถึง 2π
@@ -45,7 +45,7 @@ class _HomeViewState extends State<HomeView>
         backgroundColor: Colors.transparent, // ทำให้พื้นหลังโปร่งใส
         elevation: 0, // ลบเงา
         centerTitle: true, // ตั้งค่าให้อยู่ตรงกลาง (ถ้าต้องการ)
-        iconTheme: IconThemeData(color: Colors.white), // ตั้งค่าสีไอคอน
+        iconTheme: const IconThemeData(color: Colors.white), // ตั้งค่าสีไอคอน
         // ตั้งค่า systemOverlayStyle เพื่อปรับสีของ status bar
         systemOverlayStyle: SystemUiOverlayStyle.light,
       ),
@@ -56,12 +56,12 @@ class _HomeViewState extends State<HomeView>
           return Container(
             decoration: BoxDecoration(
               gradient: LinearGradient(
-                colors: [
+                colors: const [
                   Colors.blueAccent,
                   Colors.purpleAccent,
                   Colors.redAccent,
                 ],
-                stops: [0.0, 0.5, 1.0],
+                stops: const [0.0, 0.5, 1.0],
                 begin: Alignment.topLeft,
                 end: Alignment.bottomRight,
                 transform: GradientRotation(_animation.value),
