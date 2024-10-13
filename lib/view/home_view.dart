@@ -17,19 +17,16 @@ class _HomeViewState extends State<HomeView>
   @override
   void initState() {
     super.initState();
-    // สร้าง AnimationController
     _controller = AnimationController(
       vsync: this,
       duration: const Duration(seconds: 10),
-    )..repeat(); // ทำให้วนลูปไม่รู้จบ
+    )..repeat();
 
-    // สร้าง Animation ที่เปลี่ยนจาก 0 ถึง 2π
     _animation = Tween(begin: 0.0, end: 2 * pi).animate(_controller);
   }
 
   @override
   void dispose() {
-    // ปล่อยหน่วยความจำเมื่อไม่ใช้งาน
     _controller.dispose();
     super.dispose();
   }
@@ -40,13 +37,12 @@ class _HomeViewState extends State<HomeView>
       appBar: AppBar(
         title: Text(
           'XO Game Home',
-          style: GoogleFonts.prompt(color: Colors.white), // ตั้งค่าสีข้อความเป็นสีขาว
+          style: GoogleFonts.prompt(color: Colors.white),
         ),
-        backgroundColor: Colors.transparent, // ทำให้พื้นหลังโปร่งใส
-        elevation: 0, // ลบเงา
-        centerTitle: true, // ตั้งค่าให้อยู่ตรงกลาง (ถ้าต้องการ)
-        iconTheme: const IconThemeData(color: Colors.white), // ตั้งค่าสีไอคอน
-        // ตั้งค่า systemOverlayStyle เพื่อปรับสีของ status bar
+        backgroundColor: Colors.transparent,
+        elevation: 0,
+        centerTitle: true,
+        iconTheme: const IconThemeData(color: Colors.white),
         systemOverlayStyle: SystemUiOverlayStyle.light,
       ),
       extendBodyBehindAppBar: true,
@@ -74,7 +70,6 @@ class _HomeViewState extends State<HomeView>
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              // ปุ่มเริ่มเกม
               SizedBox(
                 width: 200,
                 height: 60,
@@ -108,7 +103,6 @@ class _HomeViewState extends State<HomeView>
                 ),
               ),
               const SizedBox(height: 20),
-              // ปุ่มดูประวัติการเล่น
               SizedBox(
                 width: 200,
                 height: 60,

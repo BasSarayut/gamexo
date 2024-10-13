@@ -20,7 +20,6 @@ class ReplayView extends StatelessWidget {
             var gameBox = Hive.box('game_history');
 
             if (gameBox.isEmpty) {
-              // ถ้าไม่มีประวัติการเล่น
               return Center(
                 child: Text(
                   'ไม่มีประวัติ',
@@ -61,14 +60,14 @@ class ReplayView extends StatelessWidget {
                       ),
                     ),
                     onTap: () {
-                      // แสดงรายละเอียดหรือเล่นซ้ำ
+                      Get.toNamed('/replayboard',
+                          arguments: [game['board'], game['result']]);
                     },
                   );
                 },
               );
             }
           } else if (snapshot.hasError) {
-            // กรณีเกิดข้อผิดพลาดในการเปิด Hive Box
             return Center(
               child: Text(
                 'มีบางอย่างเกิดข้อผิดพลาด',

@@ -47,8 +47,8 @@ class GameView extends StatelessWidget {
               return Padding(
                 padding: const EdgeInsets.all(20.0),
                 child: SizedBox(
-                  width: 200, // ใช้ขนาดปุ่มแบบเดียวกัน
-                  height: 60, // ใช้ขนาดปุ่มแบบเดียวกัน
+                  width: 200, 
+                  height: 60, 
                   child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
                       padding: const EdgeInsets.symmetric(
@@ -56,21 +56,21 @@ class GameView extends StatelessWidget {
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(20),
                       ),
-                      backgroundColor: Colors.grey, // สีพื้นหลังแบบเดียวกัน
+                      backgroundColor: Colors.grey,
                     ),
                     onPressed: () {
-                      controller.resetGame(); // ฟังก์ชันเดิม
+                      controller.resetGame();
                     },
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         const Icon(Icons.replay_rounded,
-                            color: Colors.white), // ไอคอนรีเพลย์
+                            color: Colors.white),
                         const SizedBox(width: 10),
                         Text(
-                          'เริ่มเกมส์ใหม่', // ข้อความเหมือนเดิม
+                          'เริ่มเกมส์ใหม่',
                           style: GoogleFonts.prompt(
-                            fontSize: 18, // ปรับขนาดฟอนต์ให้ตรงกับตัวอย่าง
+                            fontSize: 18,
                             color: Colors.white,
                             fontWeight: FontWeight.bold,
                           ),

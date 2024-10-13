@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:gamexo/view/game_view.dart';
 import 'package:gamexo/view/home_view.dart';
+import 'package:gamexo/view/replay_board_view.dart';
 import 'package:gamexo/view/replay_view.dart';
 import 'package:get/get.dart';
 import 'package:hive_flutter/hive_flutter.dart';
@@ -23,6 +24,7 @@ class MyApp extends StatelessWidget {
         GetPage(name: '/', page: () => HomeView()),
         GetPage(name: '/game', page: () => GameView()),
         GetPage(name: '/replay', page: () => ReplayView()),
+        GetPage(name: '/replayboard', page: () => ReplayBoardView()),
       ],
       debugShowCheckedModeBanner: false,
     );
